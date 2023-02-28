@@ -1,0 +1,35 @@
+﻿@*Users.Index*@
+<link href="~/css/users.css" rel="stylesheet" />
+
+@model UsersMainModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Użytkownicy</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.users.Count; i++)
+        {
+
+        <tr>
+            <td>@Model.users[i].firstName</td>
+            <td>@Model.users[i].surname</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@i">Edycja</a> |
+                <a asp-action="Details" asp-route-id="@i">Szczegóły</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+

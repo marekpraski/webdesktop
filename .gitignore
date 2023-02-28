@@ -1,0 +1,6 @@
+/WebDesktop/bin/
+/WebDesktop/obj/
+/WebDesktop/wwwroot/lib/
+*.sln
+.svn/
+.vs/

@@ -1,0 +1,23 @@
+﻿@model UniwersalnyDesktop.DesktopUser
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+@Model.displayName
+<br />
+@Model.id
+
+<form action="/users/Index" method="post">
+
+    <input type="hidden" asp-for="id" />
+    <label>imię</label><input asp-for="firstName" /><br />
+    <label>nazwisko</label><input asp-for="surname" /><br />
+    <label>login sql</label><input asp-for="sqlLogin" /><br />
+    <label>hasło sql</label><input asp-for="sqlPassword" /><br />
+   <label>login domenowy</label><input asp-for="windowsLogin" /><br />
+   <label>oddział</label><input asp-for="oddzial" /><br />
+   <input id="Submit1" type="submit" value="submit" />
+
+</form>
+
